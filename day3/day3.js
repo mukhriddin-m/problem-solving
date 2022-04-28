@@ -115,12 +115,13 @@
 // const jsonData = JSON.stringify(obj);
 // console.log(jsonData)
 
-let person = {
-  name: "khusan",
-  age: 13,
-};
+// let person = {
+//   name: "khusan",
+//   age: 13,
+// };
 
-let person2 = Object.assign(person);
+// let person2 = Object.assign(person);
 
-console.log(person);
-console.log(person2);
+// console.log(person);
+// console.log(person2);
+
