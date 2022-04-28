@@ -112,3 +112,6 @@
 // }
 // console.log(replaceWords("hello my name is khasan"));
 
+
+
+
