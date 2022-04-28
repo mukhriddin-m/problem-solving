@@ -127,3 +127,5 @@ console.log(compareArr(array1, array2));
 //   }
 // }
 // console.log(compareArr(array1, array2));
+
+
