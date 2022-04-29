@@ -25,18 +25,18 @@
 
 // ---------Compare two arrays-----------//
 
-let array1 = [1, 3, 5, 8];
-let array2 = [1, 3, 5, 8];
-function compareArr(arr1, arr2) {
-  let arr1Elements = JSON.stringify(arr1);
-  let arr2Elements = JSON.stringify(arr2);
-  if (arr1Elements == arr2Elements) {
-    return true;
-  } else {
-    return false;
-  }
-}
-console.log(compareArr(array1, array2));
+// let array1 = [1, 3, 5, 8];
+// let array2 = [1, 3, 5, 8];
+// function compareArr(arr1, arr2) {
+//   let arr1Elements = JSON.stringify(arr1);
+//   let arr2Elements = JSON.stringify(arr2);
+//   if (arr1Elements == arr2Elements) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// console.log(compareArr(array1, array2));
 
 //--------------- Get Random Item From an Array---------------///
 
@@ -93,14 +93,6 @@ console.log(compareArr(array1, array2));
 // }
 // console.log(removeItem(array, 4));
 
-// const person = {
-//   name: "mukhriddin",
-//   age: 18,
-//   live: "Uzbekistan",
-// };
-// let add = (person["hobby"] = "reading");
-// console.log(person);
-
 // const user = {
 //   name: "mukhriddin",
 //   age: 18,
@@ -109,6 +101,7 @@ console.log(compareArr(array1, array2));
 
 // let add = (user["hair"] = "black")
 // console.log(user)
+
 // let array1 = [1, 2, 3, 4];
 // let array2 = [1, 2, 3, 4];
 // function compareArr(arr1, arr2) {
@@ -128,4 +121,42 @@ console.log(compareArr(array1, array2));
 // }
 // console.log(compareArr(array1, array2));
 
+// const nums = [1, 34, 56, 75, 32, 14, 13, 45];
 
+// // nums.sort();
+// nums.reverse();
+// console.log(nums);
+
+// const firstName = "mukhriddin";
+
+// let firstLettter = firstName[2];
+
+// console.log(firstLettter)
+
+// const player = { name: "mukhriddin", age: 18, country: "UZB" };
+
+// console.log(player);
+
+// const player2 = { name: "khushnud", age: 18, country: "AFG" };
+
+// console.log(player2)
+
+// const player3 = { name: "hasan", age: 13, country: "Pakistan" };
+
+// console.log(player3)
+
+//---------- Creating an Object using CONSTRUCTOR--------------//
+
+function Player(name, age, height, country) {
+  this.name = name;
+  this.age = age;
+  this.height = height;
+  this.country = country;
+}
+const player1 = new Player("muhriddin", 18, 170, "Uzb");
+
+console.log(player1);
+
+const player2 = new Player("hasan", 13, 160, "AFG");
+
+console.log(player2);
