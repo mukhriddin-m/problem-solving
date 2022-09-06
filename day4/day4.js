@@ -1,71 +1,50 @@
 //------------ check if a key exists in an Object----------//
 
-// let user = {
-//   name: "muhriddin",
-//   age: 18,
-//   hobby: "swimming",
-// };
+// function checkKeys() {
+//   let user = {
+//     name: "muhriddin",
+//     age: 18,
+//     hobby: "swimming",
+//   };
+//   let checkKey = "name" in user;
 
-// let checkKey = "name" in user;
-// if (checkKey) {
-//   console.log("name is exists");
-// } else {
-//   console.log("name is not exists");
-// }
-
-// -------------Add key value to an Object---------------//
-
-// let person = {
-//   name: "muhriddin",
-//   age: 18,
-// };
-
-// let add = (person["hobby"] = "reading");
-// console.log(person);
-
-// ---------Compare two arrays-----------//
-
-// let array1 = [1, 3, 5, 8];
-// let array2 = [1, 3, 5, 8];
-// function compareArr(arr1, arr2) {
-//   let arr1Elements = JSON.stringify(arr1);
-//   let arr2Elements = JSON.stringify(arr2);
-//   if (arr1Elements == arr2Elements) {
+//   if (checkKey) {
 //     return true;
 //   } else {
 //     return false;
 //   }
 // }
-// console.log(compareArr(array1, array2));
+// console.log(checkKeys());
 
-//--------------- Get Random Item From an Array---------------///
+// -------------Add key value to an Object---------------//
 
-// const items = [1, 27, 0, 13, 4, 5, 16, 7, 12, 9];
+// const person = {
+//   name: "husan",
+//   age: 12,
+// };
+// person.hobby = "coding";
 
-// const random = Math.floor(Math.random() * items.length)
+// console.log(person);
 
-// console.log(random);
+//--------------- Get Random Item From an Array---------------//
+
+// const items = [1, 2, "khusan", true, false, []];
+// const randomItem = Math.floor(Math.random() * items.length);
+// console.log(randomItem);
 
 //---------- Remove item from an Array------------//
 
-// shift()
+// const removeItemFromAnArray = (array, index) => {
+//   const newArr = [];
 
-// const nums = [1, 2, 3, 4, 5, 6];
-
-// nums.shift();
-// console.log(nums);
-
-// pop()
-
-// const nums = [1, 2, 3, 4, 5, 6];
-// nums.pop()
-
-// console.log(nums);
-
-// var items = ["Cola", "Pepsi", "Fanta"];
-
-// items.splice(2, 2, 'coffe');
-// console.log(items);
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] !== index) {
+//       newArr.push(array[i]);
+//     }
+//   }
+//   return newArr;
+// };
+// console.log(removeItemFromAnArray([1, 2, 3, 4, 5], 3));
 
 // ----------Extract value -------------//
 
@@ -83,6 +62,7 @@
 
 // const result = extractValue(objArr, "a");
 // console.log(result);
+
 // let array = [1, 2, 3, 4, 5, 6];
 // function removeItem(arr, index) {
 //   if (arr.hasOwnProperty(index)) {
@@ -93,70 +73,175 @@
 // }
 // console.log(removeItem(array, 4));
 
-// const user = {
-//   name: "mukhriddin",
-//   age: 18,
-//   color: "white",
-// };
-
-// let add = (user["hair"] = "black")
-// console.log(user)
+// ---------Compare two arrays-----------//
 
 // let array1 = [1, 2, 3, 4];
 // let array2 = [1, 2, 3, 4];
 // function compareArr(arr1, arr2) {
-//   let result = false;
-//   if (arr1.length == arr2.length) {
-//     for (let i = 0; i < arr1.length; i++) {
-//       if (arr1[i] !== arr2[i]) {
-//         return false;
-//       } else {
-//         result = true;
-//       }
-//     }
-//     return result;
-//   } else {
-//     return false;
-//   }
+//   let result = JSON.stringify(arr1) == JSON.stringify(arr2);
+//   if (result) return true;
+//   else return false;
 // }
 // console.log(compareArr(array1, array2));
 
-// const nums = [1, 34, 56, 75, 32, 14, 13, 45];
-
-// // nums.sort();
-// nums.reverse();
-// console.log(nums);
-
-// const firstName = "mukhriddin";
-
-// let firstLettter = firstName[2];
-
-// console.log(firstLettter)
-
-// const player = { name: "mukhriddin", age: 18, country: "UZB" };
-
-// console.log(player);
-
-// const player2 = { name: "khushnud", age: 18, country: "AFG" };
-
-// console.log(player2)
-
-// const player3 = { name: "hasan", age: 13, country: "Pakistan" };
-
-// console.log(player3)
-
 //---------- Creating an Object using CONSTRUCTOR--------------//
 
-function Player(name, age, height, country) {
-  this.name = name;
-  this.age = age;
-  this.height = height;
-  this.country = country;
-}
-const player1 = new Player("muhriddin", 18, 170, "Uzb");
+// function player(name, age, height, country) {
+//   this._name = name;
+//   this._age = age;
+//   this._height = height;
+//   this._country = country;
 
-console.log(player1);
+//   this.sayName = function () {
+//     return `Hello my name is ${this._name} and my age is ${this._age}`;
+//   };
+// }
 
-const player2 = new Player("hasan", 13, 160, "AFG");
+// const player1 = new Player("muhriddin", 18, 170, "Uzb");
 
-console.log(player2);
+// console.log(player1);
+
+// const array1 = [1, 2, 3, 4, 5];
+// const array2 = [1, 2, 3, 4, 5];
+// function compareArr(arr1, arr2) {
+//   if (arr1.length !== arr2.length) {
+//     return "not equal";
+//   } else {
+//     for (let i = 0; i < arr1.length; i++) {
+//       if (arr1[i] == arr2[i]) {
+//         return "equal";
+//       } else {
+//         return "teng emas";
+//       }
+//     }
+//   }
+// }
+
+// console.log(compareArr(array1, array2));
+
+// function Member(name, lastName, age, country) {
+//   this.name = name;
+//   this.lastName = lastName;
+//   this.age = age;
+//   this.country = country;
+//   this.defineMember = function () {
+//     return `Hey i am ${this.name} ${this.lastName} and i am ${this.age} years old. I'm from ${this.country}.`;
+//   };
+// }
+// const person = new Member("Mukhriddin", "Meliev", 18, "Uzbekistan");
+// console.log(person);
+
+// If we are going to make countUp, we should change push() to unshift()
+// Forexample   ------>
+
+// function countDown(num) {
+//   if (num <= 0) {
+//     return [];
+//   } else {
+//     const countArr = countDown(num - 1);
+//     countArr.unshift(num);
+//     return countArr;
+//   }
+// }
+
+// console.log(countDown(10));
+
+// function rangeOfNumbers(startNum, endNum) {
+//   if (endNum - startNum === 0) {
+//     return [startNum];
+//   } else {
+//     const numbers = rangeOfNumbers(startNum, endNum - 1);
+//     numbers.push(endNum);
+//     return numbers;
+//   }
+// }
+
+// console.log(rangeOfNumbers(5,10))
+
+// var numArr = [];
+
+// for (var i = 0; i < 3; i++) {
+//   numArr.push(i);
+// }
+// console.log(numArr);
+// console.log(i)
+
+// const obj = {
+//   prop1: "Hello",
+//   prop3: function () {
+//     console.log("I am a property dude!");
+//   },
+// };
+// console.log(obj["prop1"])
+
+// function countUp(num) {
+//   if (num < 1) {
+//     return [];
+//   } else {
+//     const numbers = countUp(num - 1);
+//     numbers.push(num);
+//     return numbers;
+//   }
+// }
+
+// console.log(countUp(10));
+
+// function findEvenOrOdd(num) {
+//   if (num % 2 == 0) {
+//     return "Even";
+//   } else {
+//     return "Odd";
+//   }
+
+//   // return num.filter((item) => (item % 2 == 0 ? "even" : "odd"));
+// }
+// console.log(findEvenOrOdd(9));
+
+// function convertToInteger(str) {
+//   return parseInt(str)
+// }
+// console.log(convertToInteger('23'))
+
+// function numToStr(num) {
+//   return "" + num;
+// }
+
+// console.log(numToStr(12))
+
+// function findSmallestInt(arg) {
+//   return Math.min(...arg);
+// }
+
+// console.log(findSmallestInt([23,42,13,42,12,-95]))
+
+// function makeNegative(num) {
+//   // return num > 0 ? -num : num;
+
+//   // if (num > 0) return -num
+//   // return num
+//   return Math.abs(num) * -1
+// }
+
+// function makeNegative(num) {
+//   if (num > 0) {
+//     return Number("-" + num);
+//   } else {
+//     return num;
+//   }
+// }
+
+// console.log(makeNegative(9));
+
+// function highAndLow(numbers) {
+//   let nums = numbers.split(' ').join(',')
+//   // return Math.max(nums)
+// }
+// console.log(highAndLow("1 2 3 4 5"));
+
+const findMinNum = (num) => {
+  return Math.min(...num);
+};
+
+console.log(findMinNum([32, 43, 12, 3, 4, -32]))
+
+
